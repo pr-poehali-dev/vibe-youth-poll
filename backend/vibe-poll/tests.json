@@ -1,0 +1,21 @@
+{
+  "tests": [
+    {
+      "name": "GET votes",
+      "method": "GET",
+      "path": "/",
+      "expectedStatus": 200,
+      "expectedBody": {"votes": {}},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "POST vote",
+      "method": "POST",
+      "path": "/",
+      "body": {"day": "fri", "voter_id": "test-voter-123"},
+      "expectedStatus": 200,
+      "expectedBody": {"votes": {}},
+      "bodyMatcher": "partial"
+    }
+  ]
+}
